@@ -1,4 +1,6 @@
 using DataEntities;
+using Dotmim.Sync;
+using Dotmim.Sync.Enumerations;
 using Dotmim.Sync.SqlServer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +35,8 @@ namespace WebApi
             var tables = new string[] { "Items" };
 
             // [Required]: Add a SqlSyncProvider acting as the server hub.
-            services.AddSyncServer<SqlSyncChangeTrackingProvider>(connectionString, tables);
+            var options = new SyncOptions { ConflictResolutionPolicy = ConflictResolutionPolicy.ClientWins };
+            services.AddSyncServer<SqlSyncChangeTrackingProvider>(connectionString, tables, options);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
