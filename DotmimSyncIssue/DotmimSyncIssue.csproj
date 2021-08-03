@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DotmimSyncIssue\WebApi.csproj" />
-    <ProjectReference Include="..\Entities\DataEntities.csproj" />
+    <ProjectReference Include="..\DataEntities\DataEntities.csproj" />
+    <ProjectReference Include="..\WebApi\WebApi.csproj" />
   </ItemGroup>
 
 </Project>
