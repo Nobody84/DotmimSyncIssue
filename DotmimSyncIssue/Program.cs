@@ -66,8 +66,8 @@ namespace DotmimSyncIssue
 
                     case MyResolveMode.ClientWinsTextAndLastModified:
                         // Client wins, copy 'Text' and 'LastModified'.
-                        remoteRow["Text"] = remoteRow["Text"];
-                        remoteRow["LastModified"] = remoteRow["LastModified"];
+                        remoteRow["Text"] = localRow["Text"];
+                        remoteRow["LastModified"] = localRow["LastModified"];
                         break;
                 }
 
