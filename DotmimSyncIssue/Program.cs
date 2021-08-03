@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,7 +22,7 @@ namespace DotmimSyncIssue
         static async Task Main(string[] args)
         {
             // Create and Cleanup Sqlite database
-            await CreateAndCleanSqliteDatabse();
+            CreateAndCleanSqliteDatabse();
 
             // Start WebApi
             StartWebApi();
@@ -94,17 +95,17 @@ namespace DotmimSyncIssue
             WebApi.Program.CreateHostBuilder(new string[] { }).Build().RunAsync();
         }
 
-        private static async Task CreateAndCleanSqliteDatabse()
+        private static void CreateAndCleanSqliteDatabse()
         {
+            if (File.Exists(DbPathSqlite))
+            {
+                File.Delete(DbPathSqlite);
+            }
+
             using (var dbContext = new MyDbContextSqlite($"Data Source={DbPathSqlite}"))
             {
                 // Create SqlDatabase
                 dbContext.Database.Migrate();
-
-                // Clear the items table
-                var allItems = await dbContext.Items.ToListAsync();
-                dbContext.Items.RemoveRange(allItems);
-                await dbContext.SaveChangesAsync();
             }
         }
 
