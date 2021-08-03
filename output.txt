@@ -1,0 +1,104 @@
+######################################################################
+### Iteration 0 - Client wins - Use Text only
+### Value stored in the databases before sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextOnly, LastModified=03:06:50.851
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextOnly, LastModified=03:06:50.823
+
+### LocalOrchestrator.OnApplyChangesFailed
+Conflict: Type=RemoteExistsLocalExists, ErrorMessage=
+Local : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextOnly
+Remote: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextOnly
+
+### First Sync
+Synchronization done.
+        Total changes  uploaded: 1
+        Total changes  downloaded: 1
+        Total changes  applied: 1
+        Total resolved conflicts: 1
+        Total duration :00.00:00.162
+
+### Value stored in the databases after first sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextOnly, LastModified=03:06:50.823
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextOnly, LastModified=03:06:50.823
+
+### Second Sync
+Synchronization done.
+        Total changes  uploaded: 1
+        Total changes  downloaded: 0
+        Total changes  applied: 0
+        Total resolved conflicts: 0
+        Total duration :00.00:00.064
+
+### Value stored in the databases after second sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextOnly, LastModified=03:06:50.823
+SqlServer: Text=My new Item. Local modfication. ResolveMode=ClientWinsTextOnly, LastModified=03:06:50.823
+
+######################################################################
+### Iteration 1 - Server wins - User Text only
+### Value stored in the databases before sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ServerWinsTextOnly, LastModified=03:06:51.181
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ServerWinsTextOnly, LastModified=03:06:51.168
+
+### LocalOrchestrator.OnApplyChangesFailed
+Conflict: Type=RemoteExistsLocalExists, ErrorMessage=
+Local : Text=My new Item. Local modfication. ResolveMode=ServerWinsTextOnly
+Remote: Text=My new Item. Remote modfication. ResolveMode=ServerWinsTextOnly
+
+### First Sync
+Synchronization done.
+        Total changes  uploaded: 1
+        Total changes  downloaded: 1
+        Total changes  applied: 1
+        Total resolved conflicts: 1
+        Total duration :00.00:00.053
+
+### Value stored in the databases after first sync.
+Sqlite   : Text=My new Item. Remote modfication. ResolveMode=ServerWinsTextOnly, LastModified=03:06:51.168
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ServerWinsTextOnly, LastModified=03:06:51.168
+
+### Second Sync
+Synchronization done.
+        Total changes  uploaded: 1
+        Total changes  downloaded: 0
+        Total changes  applied: 0
+        Total resolved conflicts: 0
+        Total duration :00.00:00.058
+
+### Value stored in the databases after second sync.
+Sqlite   : Text=My new Item. Remote modfication. ResolveMode=ServerWinsTextOnly, LastModified=03:06:51.168
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ServerWinsTextOnly, LastModified=03:06:51.168
+
+######################################################################
+### Iteration 2 - Client wins - Use Text and LastModified
+### Value stored in the databases before sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextAndLastModified, LastModified=03:06:51.357
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextAndLastModified, LastModified=03:06:51.342
+
+### LocalOrchestrator.OnApplyChangesFailed
+Conflict: Type=RemoteExistsLocalExists, ErrorMessage=
+Local : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextAndLastModified
+Remote: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextAndLastModified
+
+### First Sync
+Synchronization done.
+        Total changes  uploaded: 1
+        Total changes  downloaded: 1
+        Total changes  applied: 1
+        Total resolved conflicts: 1
+        Total duration :00.00:00.058
+
+### Value stored in the databases after first sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextAndLastModified, LastModified=03:06:51.357
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextAndLastModified, LastModified=03:06:51.342
+
+### Second Sync
+Synchronization done.
+        Total changes  uploaded: 0
+        Total changes  downloaded: 0
+        Total changes  applied: 0
+        Total resolved conflicts: 0
+        Total duration :00.00:00.050
+
+### Value stored in the databases after second sync.
+Sqlite   : Text=My new Item. Local modfication. ResolveMode=ClientWinsTextAndLastModified, LastModified=03:06:51.357
+SqlServer: Text=My new Item. Remote modfication. ResolveMode=ClientWinsTextAndLastModified, LastModified=03:06:51.342
