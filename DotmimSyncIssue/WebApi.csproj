@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dotmim.Sync.Core" Version="0.8.0" />
+    <PackageReference Include="Dotmim.Sync.SqlServer" Version="0.8.0" />
+    <PackageReference Include="Dotmim.Sync.SqlServer.ChangeTracking" Version="0.8.0" />
+    <PackageReference Include="Dotmim.Sync.Web.Server" Version="0.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\DataEntities.csproj" />
+  </ItemGroup>
+
+
+</Project>
