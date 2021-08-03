@@ -35,7 +35,7 @@ namespace WebApi
             var tables = new string[] { "Items" };
 
             // [Required]: Add a SqlSyncProvider acting as the server hub.
-            var options = new SyncOptions { ConflictResolutionPolicy = ConflictResolutionPolicy.ClientWins };
+            var options = new SyncOptions { ConflictResolutionPolicy = ConflictResolutionPolicy.ServerWins };
             services.AddSyncServer<SqlSyncChangeTrackingProvider>(connectionString, tables, options);
         }
 
